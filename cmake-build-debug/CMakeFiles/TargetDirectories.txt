@@ -1,0 +1,3 @@
+/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/APT_Assignment_1.dir
