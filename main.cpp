@@ -153,46 +153,47 @@ void merge_sort(int arr[], unsigned int l, unsigned int r) {
     merge(arr, l, m, r);
 }
 
-string calculate_mode(int array[], unsigned int array_size) {
-    string modes;
-    print_array(array, array_size);
-    // Initialize modes variable to store all the mode value
-//    vector<int> modes;
-    // Assign temporary value at the first value in the vector
+// B.1
+float calculate_median(int array[], unsigned int array_size) {
+    merge_sort(array, 0, array_size - 1);
+    unsigned int middle_index = array_size / 2;
+    if (array_size % 2 == 0) {
+        return ((float) array[middle_index - 1] + (float) array[middle_index]) / 2;
+    } else {
+        return (float) array[middle_index];
+    }
+}
 
+void calculate_medians_driver_function(int x_column[], int y_column[], unsigned int array_size) {
+    cout << "median_x=" << calculate_median(x_column, array_size) << " - ";
+    cout << "median_y=" << calculate_median(y_column, array_size) << endl;
+}
+
+// B.2
+void calculate_modes(int array[], unsigned int array_size) {
+    merge_sort(array, 0, array_size - 1);
+    unsigned int occurrence = 1;
+    unsigned int max_occurrence = 1;
     int tempValue = array[0];
-    // Initialize current_count with 1
-    int currentCount = 1;
-    // Initialize maxCount variable to store the max count
-    int maxCount = 0;
-
-    for (int i = 1; i < array_size; i++) {
-        int currentValue = array[i];
-//        cout << currentValue << endl;
-        if (currentValue == tempValue) {
-            currentCount++;
+    string modes;
+    for (int *p = array; p < array + array_size; p++) {
+        int currentValue = *p;
+        if (tempValue == *p) {
+            occurrence++;
         } else {
-            if (currentCount == maxCount) {
-                modes.push_back(tempValue);
-            } else if (currentCount > maxCount) {
-                maxCount = currentCount;
+            if (occurrence == max_occurrence) {
+                modes.append(to_string(tempValue) + " ");
+            } else if (occurrence > max_occurrence) {
                 modes.clear();
-                modes.push_back(tempValue);
+                modes.append(to_string(tempValue) + " ");
+                max_occurrence = occurrence;
             }
-            currentCount = 1;
+            occurrence = 1;
+            tempValue = currentValue;
         }
-        tempValue = currentValue;
     }
 
-    if (currentCount == maxCount) {
-        modes.push_back(tempValue);
-    } else if (currentCount > maxCount) {
-        maxCount = currentCount;
-        modes.clear();
-        modes.push_back(tempValue);
-    }
-
-    return modes;
+    cout << modes << endl;
 }
 
 int main() {
@@ -200,7 +201,12 @@ int main() {
     const unsigned int ARRAY_SIZE = calculate_array_size(file_name);
     int x_column_array[ARRAY_SIZE], y_column_array[ARRAY_SIZE];
     extract_data_from_column(file_name, x_column_array, Column::x);
-    calculate_mode(x_column_array, ARRAY_SIZE);
+    extract_data_from_column(file_name, y_column_array, Column::y);
+
+    calculate_medians_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+    calculate_modes(x_column_array, ARRAY_SIZE);
+    calculate_modes(y_column_array, ARRAY_SIZE);
+
 //    merge_sort(x_column_array, 0, ARRAY_SIZE);
 //    print_array(x_column_array, ARRAY_SIZE);
 //    cout << calculate_mode(x_column_array, ARRAY_SIZE) << endl;
