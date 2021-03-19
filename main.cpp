@@ -2,17 +2,15 @@
 #include <fstream>
 //#include <math.h>
 
-using namespace std;
-
 // enums
 enum Column {
     x,
     y
 };
 
-void print_array(int array[], unsigned int array_size) {
-    for (int *p = array; p < array + array_size; p++) {
-        cout << *p << "\n";
+void print_array(float array[], unsigned int array_size) {
+    for (float *p = array; p < array + array_size; p++) {
+        std::cout << *p << "\n";
     }
 }
 
@@ -25,14 +23,14 @@ long int sum_array(int array[], unsigned int array_size) {
     return sum;
 }
 
-unsigned int calculate_array_size(const string &file_name) {
-    ifstream infile(file_name);
+unsigned int calculate_array_size(const std::string &file_name) {
+    std::ifstream infile(file_name);
     if (!infile) {
-        cerr << "Cannot read file: " << file_name << " !\n";
+        std::cerr << "Cannot read file: " << file_name << " !\n";
         return 1;
     }
     unsigned int count = 0;
-    string line;
+    std::string line;
     // ignore the first column (x,y)
     getline(infile, line);
     while (getline(infile, line)) {
@@ -43,44 +41,47 @@ unsigned int calculate_array_size(const string &file_name) {
     return count;
 }
 
-bool string_is_digits(const string &digits) {
+bool string_is_digits(const std::string &digits) {
+    if (digits[0] == '-') {
+        return digits.substr(1, digits.length()).find_first_not_of("0123456789");
+    }
     return digits.find_first_not_of("0123456789");
 }
 
-void extract_data_from_column(const string &file_name, int array[], Column column) {
+void extract_data_from_column(const std::string &file_name, float array[], Column column) {
     int index = 0;
-    ifstream infile(file_name);
+    std::ifstream infile(file_name);
     if (!infile) {
-        cerr << "Cannot read file: " << file_name << " !\n";
+        std::cerr << "Cannot read file: " << file_name << " !\n";
         return;
     }
-    string line;
+    std::string line;
     getline(infile, line);
     while (getline(infile, line)) {
         // find the first occurrence of ',' to extract column numbers
         int index_to_comma = line.find(',');
         // x_value comes from beginning of array to index of ','
-        string x_value = line.substr(0, index_to_comma);
+        std::string x_value = line.substr(0, index_to_comma);
         // y_value comes from beginning of ',' to end of line
-        string y_value = line.substr(index_to_comma + 1, line.length());
+        std::string y_value = line.substr(index_to_comma + 1, line.length());
         // 2 cases: x column and y column
         switch (column) {
             case x:
                 if (!string_is_digits(x_value)) {
-                    cerr << "Data is in incorrect format!\n";
+                    std::cerr << "Data is in incorrect format, data: " << x_value << std::endl;
                     return;
                 }
-                array[index] = stoi(x_value);
+                array[index] = std::stof(x_value);
                 break;
             case y:
                 if (!string_is_digits(y_value)) {
-                    cerr << "Data is in incorrect format!\n";
+                    std::cerr << "Data is in incorrect format, data: " << x_value << std::endl;
                     return;
                 }
-                array[index] = stoi(y_value);
+                array[index] = std::stof(y_value);
                 break;
             default:
-                cerr << "column must be of Column enum!" << endl;
+                std::cerr << "column must be of Column enum!" << std::endl;
                 break;
         }
         index++;
@@ -88,12 +89,12 @@ void extract_data_from_column(const string &file_name, int array[], Column colum
     infile.close();
 }
 
-void merge(int arr[], unsigned int l, unsigned int m, unsigned int r) {
+void merge(float arr[], unsigned int l, unsigned int m, unsigned int r) {
     unsigned int n1 = m - l + 1;
     unsigned int n2 = r - m;
 
     // Create temp arrays
-    int L[n1], R[n2];
+    float L[n1], R[n2];
 
     // Copy data to temp arrays L[] and R[]
     for (int i = 0; i < n1; i++)
@@ -102,7 +103,6 @@ void merge(int arr[], unsigned int l, unsigned int m, unsigned int r) {
         R[j] = arr[m + 1 + j];
 
     // Merge the temp arrays back into arr[l..r]
-
     // Initial index of first subarray
     int i = 0;
 
@@ -143,7 +143,7 @@ void merge(int arr[], unsigned int l, unsigned int m, unsigned int r) {
 // l is for left index and r is
 // right index of the sub-array
 // of arr to be sorted */
-void merge_sort(int arr[], unsigned int l, unsigned int r) {
+void merge_sort(float arr[], unsigned int l, unsigned int r) {
     if (l >= r) {
         return;//returns recursively
     }
@@ -154,68 +154,63 @@ void merge_sort(int arr[], unsigned int l, unsigned int r) {
 }
 
 // B.1
-float calculate_median(int array[], unsigned int array_size) {
-    merge_sort(array, 0, array_size - 1);
+float calculate_median(float sorted_array[], unsigned int array_size) {
     unsigned int middle_index = array_size / 2;
     if (array_size % 2 == 0) {
-        return ((float) array[middle_index - 1] + (float) array[middle_index]) / 2;
+        return ((float) sorted_array[middle_index - 1] + (float) sorted_array[middle_index]) / 2;
     } else {
-        return (float) array[middle_index];
+        return (float) sorted_array[middle_index];
     }
 }
 
-void calculate_medians_driver_function(int x_column[], int y_column[], unsigned int array_size) {
-    cout << "median_x=" << calculate_median(x_column, array_size) << " - ";
-    cout << "median_y=" << calculate_median(y_column, array_size) << endl;
+void calculate_medians_driver_function(float x_column[], float y_column[], unsigned int array_size) {
+    std::cout << "median_x=" << calculate_median(x_column, array_size) << " - ";
+    std::cout << "median_y=" << calculate_median(y_column, array_size) << std::endl;
 }
 
 // B.2
-void calculate_modes(int array[], unsigned int array_size) {
+std::string calculate_modes(float array[], unsigned int array_size) {
     merge_sort(array, 0, array_size - 1);
     unsigned int occurrence = 1;
     unsigned int max_occurrence = 1;
-    int tempValue = array[0];
-    string modes;
-    for (int *p = array; p < array + array_size; p++) {
-        int currentValue = *p;
+    float tempValue = array[0];
+    std::string modes;
+    for (float *p = array; p < array + array_size; p++) {
+        float currentValue = *p;
         if (tempValue == *p) {
             occurrence++;
         } else {
             if (occurrence == max_occurrence) {
-                modes.append(to_string(tempValue) + " ");
+                modes.append(std::to_string(tempValue) + ", ");
             } else if (occurrence > max_occurrence) {
                 modes.clear();
-                modes.append(to_string(tempValue) + " ");
+                modes.append(std::to_string(tempValue) + ", ");
                 max_occurrence = occurrence;
             }
             occurrence = 1;
             tempValue = currentValue;
         }
     }
-
-    cout << modes << endl;
+    return modes.substr(0, modes.length() - 2);
 }
 
+void calculate_modes_driver_function(float x_column[], float y_column[], unsigned int array_size) {
+    std::cout << "mode_x={" << calculate_modes(x_column, array_size) << "} - ";
+    std::cout << "mode_y={" << calculate_modes(y_column, array_size) << "}" << std::endl;
+}
+
+// B.3
+
 int main() {
-    const string file_name = "/Users/trung/CLionProjects/APT_Assignment_1/data1.csv";
-    const unsigned int ARRAY_SIZE = calculate_array_size(file_name);
-    int x_column_array[ARRAY_SIZE], y_column_array[ARRAY_SIZE];
-    extract_data_from_column(file_name, x_column_array, Column::x);
-    extract_data_from_column(file_name, y_column_array, Column::y);
-
+    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data1.csv";
+    const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
+    float x_column_array[ARRAY_SIZE], y_column_array[ARRAY_SIZE];
+    extract_data_from_column(FILE_NAME, x_column_array, Column::x);
+    extract_data_from_column(FILE_NAME, y_column_array, Column::y);
+    merge_sort(x_column_array, 0, ARRAY_SIZE - 1);
+    merge_sort(y_column_array, 0, ARRAY_SIZE - 1);
     calculate_medians_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
-    calculate_modes(x_column_array, ARRAY_SIZE);
-    calculate_modes(y_column_array, ARRAY_SIZE);
-
-//    merge_sort(x_column_array, 0, ARRAY_SIZE);
-//    print_array(x_column_array, ARRAY_SIZE);
-//    cout << calculate_mode(x_column_array, ARRAY_SIZE) << endl;
-
-//    merge_sort(x_column_array, 0, ARRAY_SIZE - 1);
-//    print_array(x_column_array, ARRAY_SIZE);
-//    extract_data_from_column(file_name, y_column_array, Column::y);
-//    merge_sort(y_column_array, 0, ARRAY_SIZE - 1);
-//    print_array(y_column_array, ARRAY_SIZE);
+    calculate_modes_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
 }
 
 
