@@ -6,9 +6,25 @@
 
 #IncludeRegexTransform: 
 
+/Users/trung/CLionProjects/APT_Assignment_1/descriptive_statistics.h
+fstream
+-
+math.h
+-
+
 /Users/trung/CLionProjects/APT_Assignment_1/main.cpp
 iostream
 -
+super_merge_sort.h
+/Users/trung/CLionProjects/APT_Assignment_1/super_merge_sort.h
+super_helper_functions.h
+/Users/trung/CLionProjects/APT_Assignment_1/super_helper_functions.h
+descriptive_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/descriptive_statistics.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/super_helper_functions.h
 fstream
 -
+
+/Users/trung/CLionProjects/APT_Assignment_1/super_merge_sort.h
 
