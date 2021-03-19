@@ -6,25 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/Users/trung/CLionProjects/APT_Assignment_1/descriptive_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
 fstream
 -
 math.h
 -
 
-/Users/trung/CLionProjects/APT_Assignment_1/main.cpp
-iostream
--
-super_merge_sort.h
-/Users/trung/CLionProjects/APT_Assignment_1/super_merge_sort.h
-super_helper_functions.h
-/Users/trung/CLionProjects/APT_Assignment_1/super_helper_functions.h
-descriptive_statistics.h
-/Users/trung/CLionProjects/APT_Assignment_1/descriptive_statistics.h
-
-/Users/trung/CLionProjects/APT_Assignment_1/super_helper_functions.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
 fstream
 -
 
-/Users/trung/CLionProjects/APT_Assignment_1/super_merge_sort.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/helper_functions.h
+fstream
+-
+
+/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/main.cpp
+iostream
+-
+headers/file.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
+headers/merge_sort.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
+headers/helper_functions.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/helper_functions.h
+headers/descriptive_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
 

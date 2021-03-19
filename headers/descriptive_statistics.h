@@ -91,6 +91,6 @@ double calculate_mad(double array[], unsigned int array_size) {
 
 //mad_x=__ - mad_y=__
 void calculate_mad_driver_function(double x_column[], double y_column[], unsigned int array_size) {
-    std::cout << "max_x=" << calculate_mad(x_column, array_size) << " - mad_y=" << calculate_mad(y_column, array_size)
+    std::cout << "mad_x=" << calculate_mad(x_column, array_size) << " - mad_y=" << calculate_mad(y_column, array_size)
               << std::endl;
 }

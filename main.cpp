@@ -86,19 +86,27 @@
 //}
 
 int main() {
-    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data1.csv";
-    const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
-    double x_column_array[ARRAY_SIZE], y_column_array[ARRAY_SIZE];
+    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/datasets/data3.csv";
+    if (can_open_file(FILE_NAME)) {
+        const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
+        double x_column_array[ARRAY_SIZE], y_column_array[ARRAY_SIZE];
 
-    extract_data_from_column(FILE_NAME, x_column_array, Column::x);
-    extract_data_from_column(FILE_NAME, y_column_array, Column::y);
+        if (validate_and_extract_data_from_column(FILE_NAME, x_column_array, Column::x) &&
+            validate_and_extract_data_from_column(FILE_NAME, y_column_array, Column::y)) {
+            merge_sort(x_column_array, 0, ARRAY_SIZE - 1);
+            merge_sort(y_column_array, 0, ARRAY_SIZE - 1);
 
-    merge_sort(x_column_array, 0, ARRAY_SIZE - 1);
-    merge_sort(y_column_array, 0, ARRAY_SIZE - 1);
+            std::cout.precision(10);
+            calculate_medians_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+            calculate_modes_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+            calculate_variance_standard_variance_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+            calculate_mad_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+        } else {
+            return 1;
+        }
 
-    std::cout.precision(10);
-    calculate_medians_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
-    calculate_modes_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
-    calculate_variance_standard_variance_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
-    calculate_mad_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+        return 0;
+    }
+    return 1;
+
 }
