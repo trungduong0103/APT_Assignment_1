@@ -17,12 +17,13 @@ void calculate_medians_driver_function(double x_column[], double y_column[], uns
 
 // B.2
 std::string calculate_modes(double array[], unsigned int array_size) {
-    unsigned int occurrence = 1;
-    unsigned int max_occurrence = 1;
+    unsigned int occurrence = 0;
+    unsigned int max_occurrence = 0;
     double tempValue = array[0];
     std::string modes;
     for (double *p = array; p < array + array_size; p++) {
         double currentValue = *p;
+        std::cout << tempValue << " " << currentValue << " " << occurrence << " " << modes << std::endl;
         if (tempValue == *p) {
             occurrence++;
         } else {
@@ -33,16 +34,17 @@ std::string calculate_modes(double array[], unsigned int array_size) {
                 modes.append(std::to_string(tempValue) + ", ");
                 max_occurrence = occurrence;
             }
-            occurrence = 1;
-            tempValue = currentValue;
+            occurrence = 0;
         }
+        tempValue = currentValue;
     }
     return modes.substr(0, modes.length() - 2);
 }
 
 void calculate_modes_driver_function(double x_column[], double y_column[], unsigned int array_size) {
-    std::cout << "mode_x={" << calculate_modes(x_column, array_size) << "} - ";
-    std::cout << "mode_y={" << calculate_modes(y_column, array_size) << "}" << std::endl;
+    std::cout << calculate_modes(x_column, array_size) << std::endl;
+//    std::cout << "mode_x={" << calculate_modes(x_column, array_size) << "} - ";
+//    std::cout << "mode_y={" << calculate_modes(y_column, array_size) << "}" << std::endl;
 }
 
 // B.3

@@ -97,10 +97,10 @@ int main() {
             merge_sort(y_column_array, 0, ARRAY_SIZE - 1);
 
             std::cout.precision(10);
-            calculate_medians_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+//            calculate_medians_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
             calculate_modes_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
-            calculate_variance_standard_variance_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
-            calculate_mad_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+//            calculate_variance_standard_variance_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
+//            calculate_mad_driver_function(x_column_array, y_column_array, ARRAY_SIZE);
         } else {
             return 1;
         }
