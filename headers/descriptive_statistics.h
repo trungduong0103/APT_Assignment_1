@@ -1,5 +1,6 @@
 #include <fstream>
 #include <math.h>
+
 // B.1
 double calculate_median(double sorted_array[], unsigned int array_size) {
     unsigned int middle_index = array_size / 2;
@@ -18,13 +19,12 @@ void calculate_medians_driver_function(double x_column[], double y_column[], uns
 // B.2
 std::string calculate_modes(double array[], unsigned int array_size) {
     unsigned int occurrence = 0;
-    unsigned int max_occurrence = 0;
+    unsigned int max_occurrence = 1;
     double tempValue = array[0];
     std::string modes;
     for (double *p = array; p < array + array_size; p++) {
         double currentValue = *p;
-        std::cout << tempValue << " " << currentValue << " " << occurrence << " " << modes << std::endl;
-        if (tempValue == *p) {
+        if (tempValue == currentValue) {
             occurrence++;
         } else {
             if (occurrence == max_occurrence) {
@@ -34,17 +34,24 @@ std::string calculate_modes(double array[], unsigned int array_size) {
                 modes.append(std::to_string(tempValue) + ", ");
                 max_occurrence = occurrence;
             }
-            occurrence = 0;
+            occurrence = 1;
+            tempValue = currentValue;
         }
-        tempValue = currentValue;
     }
+
+    if (occurrence == max_occurrence) {
+        modes.append(std::to_string(tempValue) + ", ");
+    } else if (occurrence > max_occurrence) {
+        modes.clear();
+        modes.append(std::to_string(tempValue) + ", ");
+    }
+
     return modes.substr(0, modes.length() - 2);
 }
 
 void calculate_modes_driver_function(double x_column[], double y_column[], unsigned int array_size) {
-    std::cout << calculate_modes(x_column, array_size) << std::endl;
-//    std::cout << "mode_x={" << calculate_modes(x_column, array_size) << "} - ";
-//    std::cout << "mode_y={" << calculate_modes(y_column, array_size) << "}" << std::endl;
+    std::cout << "mode_x={" << calculate_modes(x_column, array_size) << "} - ";
+    std::cout << "mode_y={" << calculate_modes(y_column, array_size) << "}" << std::endl;
 }
 
 // B.3
