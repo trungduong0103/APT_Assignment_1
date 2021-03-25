@@ -8,7 +8,7 @@
 
 int main_driver_function() {
     // file name
-    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data/data3.csv";
+    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data/data1.csv";
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_NAME)) {
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
@@ -26,7 +26,8 @@ int main_driver_function() {
 
             // b3 linear regression
             // TODO: finish this
-            double reg_x_y;
+            double mean_x = calculate_mean(x_column_array, ARRAY_SIZE);
+            double mean_y = calculate_mean(y_column_array, ARRAY_SIZE);
 
             // sort for descriptive statistics
             merge_sort(x_column_array, 0, ARRAY_SIZE - 1);
@@ -82,12 +83,13 @@ int main_driver_function() {
             std::cout << "mode_x={" << modes_x << "} - mode_y={" << modes_y << "}" << std::endl;
             std::cout << "var_x=" << variance_x << " - var_y=" << variance_y << std::endl;
             std::cout << "stdev_x=" << stdev_x << " - stdev_y=" << stdev_y << std::endl;
-            std::cout << "mad_x=" << mad_x << " - mad_y=" << stdev_y << std::endl;
+            std::cout << "mad_x=" << mad_x << " - mad_y=" << mad_y << std::endl;
             std::cout << "q1_x=" << q1_x << " - q1_y=" << q1_y << std::endl;
             std::cout << "skew_x=" << skew_x << " - skew_y=" << skew_y << std::endl;
             std::cout << "kurt_x=" << kurt_x << " - kurt_y=" << kurt_y << std::endl;
             std::cout << "cov(x_y)=" << cov_x_y << std::endl;
             std::cout << "r(x_y)=" << r_x_y << std::endl;
+            display_linear_regression_formula(mean_x, mean_y, stdev_x, stdev_y, r_x_y);
 
             return 0;
         }

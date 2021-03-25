@@ -32,3 +32,18 @@ unsigned int calculate_array_size(const std::string &file_name) {
 
     return count;
 }
+
+void display_execution_time(int (*function)()) {
+    auto t1 = std::chrono::high_resolution_clock::now();
+    function();
+    auto t2 = std::chrono::high_resolution_clock::now();
+
+    /* Getting number of milliseconds as an integer. */
+    auto ms_int = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+
+    /* Getting number of milliseconds as a double. */
+    std::chrono::duration<double, std::milli> ms_double = t2 - t1;
+
+    std::cout << ms_int.count() << "ms\n";
+    std::cout << ms_double.count() << "ms";
+}

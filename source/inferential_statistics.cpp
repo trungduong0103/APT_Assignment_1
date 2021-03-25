@@ -53,14 +53,11 @@ double calculate_correlation_coefficient(const double x[], const double y[], uns
     return numerator / denominator;
 }
 
-void calculate_correlation_coefficient_driver_function(const double r_x_y) {
-    std::cout << "r(x_y)=" << r_x_y << std::endl;
-}
 
 //Calculate and display linear regression line of X and Y
 void display_linear_regression_formula(double mean_x, double mean_y, double stdev_x, double stdev_y, double r) {
     double slope = (r * stdev_y) / stdev_x;
     double intercept = mean_y - slope * mean_x;
 
-    std::cout << "y = " << slope << "*x +" << intercept << std::endl;
+    std::cout << "y = " << slope << "x + " << intercept << std::endl;
 }
