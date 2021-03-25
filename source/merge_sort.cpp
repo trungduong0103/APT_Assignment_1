@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../headers/merge_sort.h"
 
 void merge(double arr[], unsigned int l, unsigned int m, unsigned int r) {
@@ -5,7 +6,7 @@ void merge(double arr[], unsigned int l, unsigned int m, unsigned int r) {
     unsigned int n2 = r - m;
 
     // Create temp arrays
-    double L[n1], R[n2];
+    double *L = (double *)malloc(n1 * sizeof(double)), *R = (double *)malloc(n2 * sizeof(double));
 
     // Copy data to temp arrays L[] and R[]
     for (int i = 0; i < n1; i++)

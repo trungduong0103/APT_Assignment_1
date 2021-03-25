@@ -12,7 +12,7 @@ int main_driver_function() {
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_NAME)) {
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
-        double x_column_array[ARRAY_SIZE], y_column_array[ARRAY_SIZE];
+        double *x_column_array = (double *)malloc(ARRAY_SIZE * sizeof(double)), *y_column_array = (double *)malloc(ARRAY_SIZE * sizeof(double));
 
         // validate if data in csv file is in correct format and extract data
         if (validate_and_extract_data_from_column(FILE_NAME, x_column_array, 'x') &&

@@ -13,17 +13,16 @@ bool can_open_file(const std::string &file_name) {
 }
 
 bool string_is_digits(const std::string &string) {
-    std::cout<<string<<std::endl;
+    std::cout << string << std::endl;
     if (string[0] == '-') {
-        return string.substr(1, string.length()).find_first_not_of("0123456789.");
+        return string.substr(1, string.length()).find_first_not_of("0123456789.") == std::string::npos;
     }
-    return string.find_first_not_of("0123456789.");
+    return string.find_first_not_of("0123456789.") == std::string::npos;
 }
 
 void remove_whitespace(std::string &string) {
     for (int i = string.find(' '); i < string.length(); i = string.find(' ', i)) {
         string.erase(i, 1);
-        std::cout << string << std::endl;
     }
 }
 
@@ -42,9 +41,9 @@ bool has_more_than_two_columns(const std::string &string) {
     return false;
 }
 
-bool has_characters(const std::string &string) {
-
-}
+//bool has_characters(const std::string &string) {
+//
+//}
 
 bool validate_and_extract_data_from_column(const std::string &file_name, double array[], char column) {
     int index = 0;
