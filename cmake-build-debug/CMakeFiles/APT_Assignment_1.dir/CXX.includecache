@@ -9,16 +9,24 @@
 /Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
 fstream
 -
+iostream
+-
 math.h
 -
 
 /Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
 fstream
 -
+iostream
+-
 
-/Users/trung/CLionProjects/APT_Assignment_1/headers/helper_functions.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
 fstream
 -
+iostream
+-
+
+/Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h
 
 /Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
 
@@ -29,8 +37,10 @@ headers/file.h
 /Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
 headers/merge_sort.h
 /Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
-headers/helper_functions.h
-/Users/trung/CLionProjects/APT_Assignment_1/headers/helper_functions.h
+headers/helpers.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
 headers/descriptive_statistics.h
 /Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
+headers/inferential_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h
 

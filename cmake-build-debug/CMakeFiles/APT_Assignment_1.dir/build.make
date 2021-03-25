@@ -90,17 +90,92 @@ CMakeFiles/APT_Assignment_1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APT_Assignment_1.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trung/CLionProjects/APT_Assignment_1/main.cpp -o CMakeFiles/APT_Assignment_1.dir/main.cpp.s
 
+CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o: CMakeFiles/APT_Assignment_1.dir/flags.make
+CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o: ../source/descriptive_statistics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o -c /Users/trung/CLionProjects/APT_Assignment_1/source/descriptive_statistics.cpp
+
+CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trung/CLionProjects/APT_Assignment_1/source/descriptive_statistics.cpp > CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.i
+
+CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trung/CLionProjects/APT_Assignment_1/source/descriptive_statistics.cpp -o CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.s
+
+CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o: CMakeFiles/APT_Assignment_1.dir/flags.make
+CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o: ../source/file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o -c /Users/trung/CLionProjects/APT_Assignment_1/source/file.cpp
+
+CMakeFiles/APT_Assignment_1.dir/source/file.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APT_Assignment_1.dir/source/file.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trung/CLionProjects/APT_Assignment_1/source/file.cpp > CMakeFiles/APT_Assignment_1.dir/source/file.cpp.i
+
+CMakeFiles/APT_Assignment_1.dir/source/file.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APT_Assignment_1.dir/source/file.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trung/CLionProjects/APT_Assignment_1/source/file.cpp -o CMakeFiles/APT_Assignment_1.dir/source/file.cpp.s
+
+CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o: CMakeFiles/APT_Assignment_1.dir/flags.make
+CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o: ../source/helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o -c /Users/trung/CLionProjects/APT_Assignment_1/source/helpers.cpp
+
+CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trung/CLionProjects/APT_Assignment_1/source/helpers.cpp > CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.i
+
+CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trung/CLionProjects/APT_Assignment_1/source/helpers.cpp -o CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.s
+
+CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o: CMakeFiles/APT_Assignment_1.dir/flags.make
+CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o: ../source/inferential_statistics.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o -c /Users/trung/CLionProjects/APT_Assignment_1/source/inferential_statistics.cpp
+
+CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trung/CLionProjects/APT_Assignment_1/source/inferential_statistics.cpp > CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.i
+
+CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trung/CLionProjects/APT_Assignment_1/source/inferential_statistics.cpp -o CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.s
+
+CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o: CMakeFiles/APT_Assignment_1.dir/flags.make
+CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o: ../source/merge_sort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o -c /Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp
+
+CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp > CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.i
+
+CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp -o CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.s
+
 # Object files for target APT_Assignment_1
 APT_Assignment_1_OBJECTS = \
-"CMakeFiles/APT_Assignment_1.dir/main.cpp.o"
+"CMakeFiles/APT_Assignment_1.dir/main.cpp.o" \
+"CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o" \
+"CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o" \
+"CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o" \
+"CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o" \
+"CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o"
 
 # External object files for target APT_Assignment_1
 APT_Assignment_1_EXTERNAL_OBJECTS =
 
 APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/main.cpp.o
+APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o
+APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o
+APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o
+APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o
+APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o
 APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/build.make
 APT_Assignment_1: CMakeFiles/APT_Assignment_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable APT_Assignment_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable APT_Assignment_1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/APT_Assignment_1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

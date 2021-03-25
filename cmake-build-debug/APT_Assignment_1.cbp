@@ -80,7 +80,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/file.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/main_driver_function.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
 		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/main.cpp">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/descriptive_statistics.cpp">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/file.cpp">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/helpers.cpp">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/inferential_statistics.cpp">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp">
 			<Option target="APT_Assignment_1"/>
 		</Unit>
 		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/CMakeLists.txt">

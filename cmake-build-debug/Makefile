@@ -170,6 +170,141 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+source/descriptive_statistics.o: source/descriptive_statistics.cpp.o
+
+.PHONY : source/descriptive_statistics.o
+
+# target to build an object file
+source/descriptive_statistics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o
+.PHONY : source/descriptive_statistics.cpp.o
+
+source/descriptive_statistics.i: source/descriptive_statistics.cpp.i
+
+.PHONY : source/descriptive_statistics.i
+
+# target to preprocess a source file
+source/descriptive_statistics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.i
+.PHONY : source/descriptive_statistics.cpp.i
+
+source/descriptive_statistics.s: source/descriptive_statistics.cpp.s
+
+.PHONY : source/descriptive_statistics.s
+
+# target to generate assembly for a file
+source/descriptive_statistics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.s
+.PHONY : source/descriptive_statistics.cpp.s
+
+source/file.o: source/file.cpp.o
+
+.PHONY : source/file.o
+
+# target to build an object file
+source/file.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o
+.PHONY : source/file.cpp.o
+
+source/file.i: source/file.cpp.i
+
+.PHONY : source/file.i
+
+# target to preprocess a source file
+source/file.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/file.cpp.i
+.PHONY : source/file.cpp.i
+
+source/file.s: source/file.cpp.s
+
+.PHONY : source/file.s
+
+# target to generate assembly for a file
+source/file.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/file.cpp.s
+.PHONY : source/file.cpp.s
+
+source/helpers.o: source/helpers.cpp.o
+
+.PHONY : source/helpers.o
+
+# target to build an object file
+source/helpers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o
+.PHONY : source/helpers.cpp.o
+
+source/helpers.i: source/helpers.cpp.i
+
+.PHONY : source/helpers.i
+
+# target to preprocess a source file
+source/helpers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.i
+.PHONY : source/helpers.cpp.i
+
+source/helpers.s: source/helpers.cpp.s
+
+.PHONY : source/helpers.s
+
+# target to generate assembly for a file
+source/helpers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.s
+.PHONY : source/helpers.cpp.s
+
+source/inferential_statistics.o: source/inferential_statistics.cpp.o
+
+.PHONY : source/inferential_statistics.o
+
+# target to build an object file
+source/inferential_statistics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o
+.PHONY : source/inferential_statistics.cpp.o
+
+source/inferential_statistics.i: source/inferential_statistics.cpp.i
+
+.PHONY : source/inferential_statistics.i
+
+# target to preprocess a source file
+source/inferential_statistics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.i
+.PHONY : source/inferential_statistics.cpp.i
+
+source/inferential_statistics.s: source/inferential_statistics.cpp.s
+
+.PHONY : source/inferential_statistics.s
+
+# target to generate assembly for a file
+source/inferential_statistics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.s
+.PHONY : source/inferential_statistics.cpp.s
+
+source/merge_sort.o: source/merge_sort.cpp.o
+
+.PHONY : source/merge_sort.o
+
+# target to build an object file
+source/merge_sort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o
+.PHONY : source/merge_sort.cpp.o
+
+source/merge_sort.i: source/merge_sort.cpp.i
+
+.PHONY : source/merge_sort.i
+
+# target to preprocess a source file
+source/merge_sort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.i
+.PHONY : source/merge_sort.cpp.i
+
+source/merge_sort.s: source/merge_sort.cpp.s
+
+.PHONY : source/merge_sort.s
+
+# target to generate assembly for a file
+source/merge_sort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.s
+.PHONY : source/merge_sort.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +317,21 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/descriptive_statistics.o"
+	@echo "... source/descriptive_statistics.i"
+	@echo "... source/descriptive_statistics.s"
+	@echo "... source/file.o"
+	@echo "... source/file.i"
+	@echo "... source/file.s"
+	@echo "... source/helpers.o"
+	@echo "... source/helpers.i"
+	@echo "... source/helpers.s"
+	@echo "... source/inferential_statistics.o"
+	@echo "... source/inferential_statistics.i"
+	@echo "... source/inferential_statistics.s"
+	@echo "... source/merge_sort.o"
+	@echo "... source/merge_sort.i"
+	@echo "... source/merge_sort.s"
 .PHONY : help
 
 

@@ -3,7 +3,8 @@
 
 CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../headers/descriptive_statistics.h
 CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../headers/file.h
-CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../headers/helper_functions.h
+CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../headers/helpers.h
+CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../headers/inferential_statistics.h
 CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../headers/merge_sort.h
 CMakeFiles/APT_Assignment_1.dir/main.cpp.o: ../main.cpp
 
