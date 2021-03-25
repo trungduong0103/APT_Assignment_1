@@ -8,7 +8,7 @@
 
 int main_driver_function() {
     // file name
-    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data/data1.csv";
+    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data/data3.csv";
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_NAME)) {
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
@@ -25,7 +25,6 @@ int main_driver_function() {
             double r_x_y = calculate_correlation_coefficient(x_column_array, y_column_array, ARRAY_SIZE);
 
             // b3 linear regression
-            // TODO: finish this
             double mean_x = calculate_mean(x_column_array, ARRAY_SIZE);
             double mean_y = calculate_mean(y_column_array, ARRAY_SIZE);
 

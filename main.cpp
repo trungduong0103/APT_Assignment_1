@@ -2,6 +2,6 @@
 #include "headers/helpers.h"
 
 int main() {
-    display_execution_time(&main_driver_function);
+    display_execution_time(main_driver_function);
     return 0;
 }
