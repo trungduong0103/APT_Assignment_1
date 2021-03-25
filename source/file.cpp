@@ -13,7 +13,6 @@ bool can_open_file(const std::string &file_name) {
 }
 
 bool string_is_digits(const std::string &string) {
-    std::cout << string << std::endl;
     if (string[0] == '-') {
         return string.substr(1, string.length()).find_first_not_of("0123456789.") == std::string::npos;
     }
@@ -41,14 +40,15 @@ bool has_more_than_two_columns(const std::string &string) {
     return false;
 }
 
-//bool has_characters(const std::string &string) {
-//
-//}
+bool has_characters(const std::string &string) {
+    return string.find_first_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") != std::string::npos;
+}
 
 bool validate_and_extract_data_from_column(const std::string &file_name, double array[], char column) {
     int index = 0;
     std::ifstream infile(file_name);
     std::string line;
+    // skip first line (x,y)
     getline(infile, line);
     while (getline(infile, line)) {
         // check if csv has more than 2 columns
@@ -58,10 +58,18 @@ bool validate_and_extract_data_from_column(const std::string &file_name, double 
                       << " in file " << file_name << std::endl;
             return false;
         }
+
         // remove whitespace if there is any
         // accepts whitespace, e.g: -#32, -#..32, #-#32, #..-#..32, -32#, -32#..
         // where # represents a space and .. means more than 1
         remove_whitespace(line);
+
+        if (has_characters(line)) {
+            std::cerr << "Parsing failed, data has character(s) at row "
+                      << index + 2
+                      << " in file " << file_name << std::endl;
+            return false;
+        }
 
         // find the first occurrence of ',' to extract column numbers
         int index_to_comma = line.find(',');
@@ -72,21 +80,9 @@ bool validate_and_extract_data_from_column(const std::string &file_name, double 
         // 2 cases: x column and y column
         switch (column) {
             case 'x':
-                if (!string_is_digits(x_value)) {
-                    std::cerr << "Parsing failed, data is in incorrect format at row "
-                              << index + 2
-                              << " in file " << file_name << std::endl;
-                    break;
-                }
                 array[index] = std::stod(x_value);
                 break;
             case 'y':
-                if (!string_is_digits(y_value)) {
-                    std::cerr << "Parsing failed, data is in incorrect format at row "
-                              << index + 2
-                              << " in file " << file_name << std::endl;
-                    break;
-                }
                 array[index] = std::stod(y_value);
                 break;
             default:
