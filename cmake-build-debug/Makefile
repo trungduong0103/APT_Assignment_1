@@ -278,6 +278,33 @@ source/inferential_statistics.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.s
 .PHONY : source/inferential_statistics.cpp.s
 
+source/main_driver_function.o: source/main_driver_function.cpp.o
+
+.PHONY : source/main_driver_function.o
+
+# target to build an object file
+source/main_driver_function.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/main_driver_function.cpp.o
+.PHONY : source/main_driver_function.cpp.o
+
+source/main_driver_function.i: source/main_driver_function.cpp.i
+
+.PHONY : source/main_driver_function.i
+
+# target to preprocess a source file
+source/main_driver_function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/main_driver_function.cpp.i
+.PHONY : source/main_driver_function.cpp.i
+
+source/main_driver_function.s: source/main_driver_function.cpp.s
+
+.PHONY : source/main_driver_function.s
+
+# target to generate assembly for a file
+source/main_driver_function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/main_driver_function.cpp.s
+.PHONY : source/main_driver_function.cpp.s
+
 source/merge_sort.o: source/merge_sort.cpp.o
 
 .PHONY : source/merge_sort.o
@@ -329,6 +356,9 @@ help:
 	@echo "... source/inferential_statistics.o"
 	@echo "... source/inferential_statistics.i"
 	@echo "... source/inferential_statistics.s"
+	@echo "... source/main_driver_function.o"
+	@echo "... source/main_driver_function.i"
+	@echo "... source/main_driver_function.s"
 	@echo "... source/merge_sort.o"
 	@echo "... source/merge_sort.i"
 	@echo "... source/merge_sort.s"

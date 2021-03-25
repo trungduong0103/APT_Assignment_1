@@ -6,9 +6,9 @@ void print_array(int array[], unsigned int array_size) {
     }
 }
 
-float sum_array(float array[], unsigned int array_size) {
-    float sum = 0;
-    for (float *p = array; p < array + array_size; p++) {
+double sum_of_array_elements(const double array[], unsigned int array_size) {
+    double sum = 0;
+    for (const double *p = array; p < array + array_size; p++) {
         sum += *p;
     }
 

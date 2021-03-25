@@ -6,7 +6,7 @@
 
 void print_array(int array[], unsigned int array_size);
 
-float sum_array(float array[], unsigned int array_size);
+double sum_of_array_elements(const double array[], unsigned int array_size);
 
 unsigned int calculate_array_size(const std::string &file_name);
 

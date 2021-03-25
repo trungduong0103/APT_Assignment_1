@@ -1,8 +1,7 @@
 #ifndef APT_ASSIGNMENT_1_FILE_H
 #define APT_ASSIGNMENT_1_FILE_H
 
-#include <fstream>
-#include <iostream>
+#include <string>
 
 bool can_open_file(const std::string &file_name);
 

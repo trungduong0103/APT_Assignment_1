@@ -3,4 +3,4 @@ project(APT_Assignment_1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(APT_Assignment_1 main.cpp headers/main_driver_function.h headers/descriptive_statistics.h headers/file.h headers/helpers.h headers/inferential_statistics.h headers/merge_sort.h source/descriptive_statistics.cpp source/file.cpp source/helpers.cpp source/inferential_statistics.cpp source/merge_sort.cpp)
+add_executable(APT_Assignment_1 main.cpp headers/main_driver_function.h headers/descriptive_statistics.h headers/file.h headers/helpers.h headers/inferential_statistics.h headers/merge_sort.h source/descriptive_statistics.cpp source/file.cpp source/helpers.cpp source/inferential_statistics.cpp source/merge_sort.cpp source/main_driver_function.cpp)

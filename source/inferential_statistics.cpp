@@ -1,6 +1,8 @@
+#include <iostream>
+#include <cmath>
 #include "../headers/inferential_statistics.h"
 #include "../headers/descriptive_statistics.h"
-#include <cmath>
+#include "../headers/helpers.h"
 
 //Sample covariance of X and Y
 double calculate_sample_covariance(const double x[], const double y[], unsigned int size) {
@@ -15,12 +17,7 @@ double calculate_sample_covariance(const double x[], const double y[], unsigned 
     return sum_of_product / (size - 1);
 }
 
-void calculate_sample_covariance_driver_function(const double cov_x_y) {
-
-    std::cout << "cov(x_y)=" << cov_x_y << std::endl;
-}
-
-//Pearson coefficient of corellation of X and Y
+//Pearson coefficient of correlation of X and Y
 double sum_of_product(const double x[], const double y[], unsigned int size) {
     double product_sum = 0;
 
@@ -41,23 +38,13 @@ double sum_of_square(const double numbers[], unsigned int size) {
     return square_sum;
 }
 
-double sum_of_elements(const double numbers[], unsigned int size) {
-    double element_sum = 0;
-
-    for (int i = 0; i != size; ++i) {
-        element_sum += numbers[i];
-    }
-
-    return element_sum;
-}
-
 double calculate_correlation_coefficient(const double x[], const double y[], unsigned int size) {
     double sum_of_xy = sum_of_product(x, y, size);
 
-    double sum_of_x = sum_of_elements(x, size);
+    double sum_of_x = sum_of_array_elements(x, size);
     double sum_of_x_squared = sum_of_square(x, size);
 
-    double sum_of_y = sum_of_elements(y, size);
+    double sum_of_y = sum_of_array_elements(y, size);
     double sum_of_y_squared = sum_of_square(y, size);
 
     double numerator = (size * sum_of_xy) - sum_of_x * sum_of_y;
@@ -67,8 +54,6 @@ double calculate_correlation_coefficient(const double x[], const double y[], uns
 }
 
 void calculate_correlation_coefficient_driver_function(const double r_x_y) {
-
-
     std::cout << "r(x_y)=" << r_x_y << std::endl;
 }
 
