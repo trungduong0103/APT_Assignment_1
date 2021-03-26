@@ -7,16 +7,15 @@
 #include "../headers/merge_sort.h"
 
 int main_driver_function() {
-    // file name
-    const std::string FILE_NAME = "/Users/trung/CLionProjects/APT_Assignment_1/data/data3.csv";
+    const std::string FILE_PATH = "/Users/trung/CLionProjects/APT_Assignment_1/data/data4.csv";
     // open the file and extract x and y columns to arrays
-    if (can_open_file(FILE_NAME)) {
-        const unsigned int ARRAY_SIZE = calculate_array_size(FILE_NAME);
+    if (can_open_file(FILE_PATH)) {
+        const unsigned int ARRAY_SIZE = calculate_array_size(FILE_PATH);
         double *x_column_array = (double *)malloc(ARRAY_SIZE * sizeof(double)), *y_column_array = (double *)malloc(ARRAY_SIZE * sizeof(double));
 
         // validate if data in csv file is in correct format and extract data
-        if (validate_and_extract_data_from_column(FILE_NAME, x_column_array, 'x') &&
-            validate_and_extract_data_from_column(FILE_NAME, y_column_array, 'y')) {
+        if (validate_and_extract_data_from_column(FILE_PATH, x_column_array, 'x') &&
+            validate_and_extract_data_from_column(FILE_PATH, y_column_array, 'y')) {
             // inferential statistics
             // b1 covariance
             double cov_x_y = calculate_sample_covariance(x_column_array, y_column_array, ARRAY_SIZE);

@@ -24,10 +24,6 @@ iostream
 
 /Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
 
-/Users/trung/CLionProjects/APT_Assignment_1/source/helpers.cpp
-../headers/helpers.h
-/Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
-
 /Users/trung/CLionProjects/APT_Assignment_1/source/main_driver_function.cpp
 iostream
 -
