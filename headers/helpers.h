@@ -15,4 +15,6 @@ void display_statistics_calculation_time(int function());
 bool generate_sample_data(const std::string &FILE_PATH, unsigned long int num_of_columns, double lower_bound,
                           double upper_bound);
 
+int main_driver_function();
+
 #endif //APT_ASSIGNMENT_1_HELPERS_H

@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o"
   "CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o"
   "CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o"
-  "CMakeFiles/APT_Assignment_1.dir/source/main_driver_function.cpp.o"
   "CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o"
 )
 
