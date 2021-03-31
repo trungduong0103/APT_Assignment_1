@@ -3,7 +3,7 @@
 #include <string>
 #include "../headers/file.h"
 
-bool can_open_file(const std::string &file_name) {
+bool can_open_file(const char *file_name) {
     std::ifstream infile(file_name);
     if (!infile) {
         std::cerr << "Cannot read file: " << file_name << "!\n";

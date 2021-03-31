@@ -3,7 +3,7 @@
 
 #include <string>
 
-bool can_open_file(const std::string &file_name);
+bool can_open_file(const char *file_name);
 
 bool validate_and_extract_data_from_column(const std::string &file_name, double array[], char column);
 

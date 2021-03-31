@@ -51,7 +51,7 @@ void display_statistics_calculation_time(int function()) {
     /* Getting number of milliseconds as a double. */
     std::chrono::duration<double, std::milli> ms_double = t2 - t1;
 
-    std::cout << "Execution time in ms: " << ms_double.count() << "ms";
+    std::cout << "Execution time in ms: " << ms_double.count() << "ms" << std::endl;
 }
 
 double generate_random_double(double min, double max) {
@@ -85,8 +85,7 @@ bool generate_sample_data(const std::string &FILE_PATH, unsigned long int num_of
     return true;
 }
 
-int main_driver_function() {
-    const std::string FILE_PATH = "/Users/trung/CLionProjects/APT_Assignment_1/data/data4.csv";
+int main_driver_function(const char *FILE_PATH) {
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_PATH)) {
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_PATH);

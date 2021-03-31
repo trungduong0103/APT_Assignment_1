@@ -6,37 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
-string
--
-
-/Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
-string
--
-
 /Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
 fstream
 -
 iostream
 -
 
-/Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h
-
-/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
-
-/Users/trung/CLionProjects/APT_Assignment_1/source/main_driver_function.cpp
-iostream
--
-string
--
-../headers/helpers.h
+/Users/trung/CLionProjects/APT_Assignment_1/main.cpp
+headers/helpers.h
 /Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
-../headers/file.h
-/Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
-../headers/descriptive_statistics.h
-/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
-../headers/inferential_statistics.h
-/Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h
-../headers/merge_sort.h
-/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
 
