@@ -75,7 +75,7 @@ bool generate_sample_data(const std::string &FILE_PATH, unsigned long int num_of
     for (int i = 0; i < num_of_columns; i++) {
         double random_x = generate_random_double(lower_bound, upper_bound);
         double random_y = generate_random_double(lower_bound, upper_bound);
-        std::string new_line = i == num_of_columns -1 ? "" : "\n";
+        std::string new_line = i == num_of_columns - 1 ? "" : "\n";
         if (i != num_of_columns) {
             outfile << random_x << "," << random_y << new_line;
         }
@@ -89,7 +89,8 @@ int main_driver_function(const char *FILE_PATH) {
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_PATH)) {
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_PATH);
-        double *x_column_array = (double *)malloc(ARRAY_SIZE * sizeof(double)), *y_column_array = (double *)malloc(ARRAY_SIZE * sizeof(double));
+        double *x_column_array = (double *) malloc(ARRAY_SIZE * sizeof(double)), *y_column_array = (double *) malloc(
+                ARRAY_SIZE * sizeof(double));
 
         // validate if data in csv file is in correct format and extract data
         if (validate_and_extract_data_from_column(FILE_PATH, x_column_array, 'x') &&
@@ -140,19 +141,6 @@ int main_driver_function(const char *FILE_PATH) {
             double kurt_x = calculate_kurtosis(x_column_array, ARRAY_SIZE);
             double kurt_y = calculate_kurtosis(y_column_array, ARRAY_SIZE);
 
-            /*
-            median_x=45 - median_y=96245.5
-            mode_x={64.000000} - mode_y={95419.000000}
-            var_x=134.3161217 - var_y=645123047.5
-            stdev_x=11.58948324 - stdev_y=25399.27258
-            mad_x=10.03658578 - mad_y=21033.12476
-            q1_x=35 - q1_y=82930
-            skew_x=0.01262271892 - skew_y=0.3619007236
-            kurt_x=-1.200678883 - kurt_y=-0.7245041858
-            cov(x_y)=1139.114745
-            r(x_y)=0.003869742997
-             */
-
             // display results
             std::cout.precision(10);
             std::cout << "median_x=" << median_x << " - median_y=" << median_y << std::endl;
@@ -166,11 +154,16 @@ int main_driver_function(const char *FILE_PATH) {
             std::cout << "cov(x_y)=" << cov_x_y << std::endl;
             std::cout << "r(x_y)=" << r_x_y << std::endl;
             display_linear_regression_formula(mean_x, mean_y, stdev_x, stdev_y, r_x_y);
+            std::cout << "ASSIGNMENT 1 GROUP 11" << std::endl;
+            std::cout << "s3698997, s3698997@rmit.edu.vn, Trung, Duong" << std::endl;
+            std::cout << "s3748874, s3748874@rmit.edu.vn, Phat, Tran" << std::endl;
+            std::cout << "s3698989, s3698989@rmit.edu.vn, Thuan, Trang" << std::endl;
 
             return 0;
         }
     }
 
     // return 1 if the file cannot be read or the validate/extract function cannot be completed
+    // cerr is not required here because it's already handled in can_open_file()
     return 1;
 }
