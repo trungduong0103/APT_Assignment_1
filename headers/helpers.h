@@ -8,12 +8,12 @@ void print_array(int array[], unsigned int array_size);
 
 double sum_of_array_elements(const double array[], unsigned int array_size);
 
-unsigned int calculate_array_size(const std::string &file_name);
+//void display_statistics_calculation_time(int function());
+//
+//bool generate_sample_data(const std::string &FILE_PATH, unsigned long int num_of_columns, double lower_bound,
+//                          double upper_bound);
 
-void display_statistics_calculation_time(int function());
-
-bool generate_sample_data(const std::string &FILE_PATH, unsigned long int num_of_columns, double lower_bound,
-                          double upper_bound);
+bool input_is_correct(int argc, char *argv[]);
 
 int main_driver_function(const char *FILE_PATH);
 

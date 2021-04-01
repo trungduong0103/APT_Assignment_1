@@ -305,6 +305,33 @@ source/merge_sort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.s
 .PHONY : source/merge_sort.cpp.s
 
+source/validation.o: source/validation.cpp.o
+
+.PHONY : source/validation.o
+
+# target to build an object file
+source/validation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/validation.cpp.o
+.PHONY : source/validation.cpp.o
+
+source/validation.i: source/validation.cpp.i
+
+.PHONY : source/validation.i
+
+# target to preprocess a source file
+source/validation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/validation.cpp.i
+.PHONY : source/validation.cpp.i
+
+source/validation.s: source/validation.cpp.s
+
+.PHONY : source/validation.s
+
+# target to generate assembly for a file
+source/validation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/validation.cpp.s
+.PHONY : source/validation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -332,6 +359,9 @@ help:
 	@echo "... source/merge_sort.o"
 	@echo "... source/merge_sort.i"
 	@echo "... source/merge_sort.s"
+	@echo "... source/validation.o"
+	@echo "... source/validation.i"
+	@echo "... source/validation.s"
 .PHONY : help
 
 

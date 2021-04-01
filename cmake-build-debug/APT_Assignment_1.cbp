@@ -95,6 +95,9 @@
 		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h">
 			<Option target="APT_Assignment_1"/>
 		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/headers/validation.h">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
 		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/main.cpp">
 			<Option target="APT_Assignment_1"/>
 		</Unit>
@@ -111,6 +114,9 @@
 			<Option target="APT_Assignment_1"/>
 		</Unit>
 		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp">
+			<Option target="APT_Assignment_1"/>
+		</Unit>
+		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/source/validation.cpp">
 			<Option target="APT_Assignment_1"/>
 		</Unit>
 		<Unit filename="/Users/trung/CLionProjects/APT_Assignment_1/CMakeLists.txt">
