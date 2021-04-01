@@ -1,7 +1,7 @@
 #ifndef APT_ASSIGNMENT_1_VALIDATION_H
 #define APT_ASSIGNMENT_1_VALIDATION_H
 
-bool string_is_digits(const std::string &string);
+bool valid_number_format(const std::string &string);
 
 void remove_whitespace(std::string &string);
 

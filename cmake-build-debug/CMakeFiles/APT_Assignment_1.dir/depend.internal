@@ -3,12 +3,14 @@
 
 CMakeFiles/APT_Assignment_1.dir/main.cpp.o
  /Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
+ /Users/trung/CLionProjects/APT_Assignment_1/headers/validation.h
  /Users/trung/CLionProjects/APT_Assignment_1/main.cpp
 CMakeFiles/APT_Assignment_1.dir/source/descriptive_statistics.cpp.o
  /Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
  /Users/trung/CLionProjects/APT_Assignment_1/source/descriptive_statistics.cpp
 CMakeFiles/APT_Assignment_1.dir/source/file.cpp.o
  /Users/trung/CLionProjects/APT_Assignment_1/headers/file.h
+ /Users/trung/CLionProjects/APT_Assignment_1/headers/validation.h
  /Users/trung/CLionProjects/APT_Assignment_1/source/file.cpp
 CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o
  /Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
@@ -25,3 +27,6 @@ CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o
 CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o
  /Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
  /Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp
+CMakeFiles/APT_Assignment_1.dir/source/validation.cpp.o
+ /Users/trung/CLionProjects/APT_Assignment_1/headers/validation.h
+ /Users/trung/CLionProjects/APT_Assignment_1/source/validation.cpp

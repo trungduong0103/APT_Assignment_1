@@ -24,7 +24,7 @@ unsigned int calculate_array_size(const std::string &file_name) {
     // ignore the first column (x,y)
     getline(infile, line);
     while (getline(infile, line)) {
-        if (!has_characters(line) && !line.empty() && !has_more_than_two_columns(line)) {
+        if (!has_characters(line) && !line.empty() && !has_more_than_two_columns(line) && valid_number_format(line)) {
             count++;
         }
     }
@@ -45,8 +45,7 @@ validate_and_extract_data_from_column(const std::string &file_name,
     getline(infile, line);
     while (getline(infile, line)) {
         remove_whitespace(line);
-
-        if (has_characters(line) || line.empty() || has_more_than_two_columns(line)) {
+        if (has_characters(line) || line.empty() || has_more_than_two_columns(line) || !valid_number_format(line)) {
             std::cerr << "Skipping row " << incorrectIndex + 2 << " in file " << file_name
                       << ". Incorrect/empty row data: " << line << std::endl;
             incorrectIndex++;
