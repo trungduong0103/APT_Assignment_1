@@ -22,17 +22,19 @@ double sum_of_array_elements(const double array[], unsigned int array_size) {
     return sum;
 }
 
-
-
 int main_driver_function(const char *FILE_PATH) {
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_PATH)) {
+        // calculate array size using csv rows count
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_PATH);
         double *x_column_array, *y_column_array;
         x_column_array = new (std::nothrow) double[ARRAY_SIZE];
         y_column_array = new (std::nothrow) double[ARRAY_SIZE];
-//        double x_column_array = new double(ARRAY_SIZE), *y_column_array = (double *) malloc(
-//                ARRAY_SIZE * sizeof(double));
+        // if pointer returned by new is a nullptr, memory allocation failed, return 1
+        if (x_column_array == nullptr || y_column_array == nullptr) {
+            std::cerr << "Error! Memory could not be allocated." << std::endl;
+            return 1;
+        }
         // validate if data in csv file is in correct format and extract data
         if (validate_and_extract_data_from_column(FILE_PATH, x_column_array, y_column_array)) {
             std::cout.precision(10);
