@@ -38,15 +38,67 @@ bool valid_number_format(const std::string &string) {
         return false;
     }
 
+    std::cout << string << std::endl;
+
     if (string[0] == '-') {
-        return string.substr(1, string.length()).find_first_not_of("0123456789.,") == std::string::npos;
+        return string.substr(1, string.length()).find_first_not_of("0123456789.") == std::string::npos;
     }
-    return string.find_first_not_of("0123456789.,") == std::string::npos;
+    int pos = string.find_first_not_of("0123456789.");
+    std::cout << pos << "-" << string.length() << std::endl;
+    return string.find_first_not_of("0123456789.") == std::string::npos;
 }
 
 // check if string has any characters
 bool has_characters(const std::string &string) {
-    return string.find_first_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") != std::string::npos;
+    const std::string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (string[0] == '-') {
+        return string.substr(1, string.length()).find_first_of(alphabet) != std::string::npos;
+    }
+    return string.find_first_of(alphabet) != std::string::npos;
+}
+
+// check if string has any special characters
+bool has_special_characters(const std::string &string) {
+    for (char c : string) {
+        // negative sign encountered, move on
+        if (c == '-') {
+            continue;
+        }
+        if ((c <= 47 || c >= 58) && c != 46) {
+            if (c == 13) {
+                return false;
+            }
+            return true;
+        }
+    }
+    return false;
+}
+
+// check if string has more than 2 decimal points
+bool has_more_than_one_decimal_points(const std::string &string) {
+    unsigned int count = 0;
+    for (char c : string) {
+        if (c == '.') {
+            count++;
+        }
+    }
+
+    return count > 1;
+}
+
+bool has_more_than_one_minus_sign(const std::string &string) {
+    unsigned int count = 0;
+    for (char c : string) {
+        if (c == '-') {
+            count++;
+        }
+    }
+    return count > 1;
+}
+
+bool column_data_is_correct(const std::string &string) {
+    return !has_more_than_one_decimal_points(string) && !has_more_than_one_minus_sign(string) &&
+           !has_characters(string) && !has_special_characters(string);
 }
 
 bool cli_input_is_correct(int argc, char *argv[]) {

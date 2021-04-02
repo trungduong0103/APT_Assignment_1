@@ -75,6 +75,7 @@ int main_driver_function(const char *FILE_PATH) {
                 ARRAY_SIZE * sizeof(double));
         // validate if data in csv file is in correct format and extract data
         if (validate_and_extract_data_from_column(FILE_PATH, x_column_array, y_column_array)) {
+            std::cout.precision(10);
             // inferential statistics
             // b1 covariance
             double cov_x_y = calculate_sample_covariance(x_column_array, y_column_array, ARRAY_SIZE);
@@ -122,7 +123,6 @@ int main_driver_function(const char *FILE_PATH) {
             double kurt_y = calculate_kurtosis(y_column_array, ARRAY_SIZE);
 
             // display results
-            std::cout.precision(10);
             std::cout << "median_x=" << median_x << " - median_y=" << median_y << std::endl;
             std::cout << "mode_x={" << modes_x << "} - mode_y={" << modes_y << "}" << std::endl;
             std::cout << "var_x=" << variance_x << " - var_y=" << variance_y << std::endl;
