@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/trung/CLionProjects/APT_Assignment_1/source/helpers.cpp" "/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/APT_Assignment_1.dir/source/helpers.cpp.o"
   "/Users/trung/CLionProjects/APT_Assignment_1/source/inferential_statistics.cpp" "/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/APT_Assignment_1.dir/source/inferential_statistics.cpp.o"
   "/Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp" "/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.o"
+  "/Users/trung/CLionProjects/APT_Assignment_1/source/test_functions.cpp" "/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/APT_Assignment_1.dir/source/test_functions.cpp.o"
   "/Users/trung/CLionProjects/APT_Assignment_1/source/validation.cpp" "/Users/trung/CLionProjects/APT_Assignment_1/cmake-build-debug/CMakeFiles/APT_Assignment_1.dir/source/validation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

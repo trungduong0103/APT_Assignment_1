@@ -22,57 +22,17 @@ double sum_of_array_elements(const double array[], unsigned int array_size) {
     return sum;
 }
 
-//void display_statistics_calculation_time(int function()) {
-//    auto t1 = std::chrono::high_resolution_clock::now();
-//    function();
-//    auto t2 = std::chrono::high_resolution_clock::now();
-//
-//    /* Getting number of milliseconds as an integer. */
-//    // auto ms_int = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
-//
-//    /* Getting number of milliseconds as a double. */
-//    std::chrono::duration<double, std::milli> ms_double = t2 - t1;
-//
-//    std::cout << "Execution time in ms: " << ms_double.count() << "ms" << std::endl;
-//}
-//
-//double generate_random_double(double min, double max) {
-//    std::random_device rd;
-//    std::mt19937 mt(rd());
-//    std::uniform_real_distribution<double> dist(min, max);
-//
-//    return dist(mt);
-//}
-//
-//bool generate_sample_data(const std::string &FILE_PATH, unsigned long int num_of_columns, double lower_bound,
-//                          double upper_bound) {
-//    std::ofstream outfile(FILE_PATH);
-//    if (!outfile.is_open()) {
-//        std::cerr << "Cannot create file at" << FILE_PATH << std::endl;
-//        return false;
-//    }
-//
-//    outfile << "x,y" << std::endl;
-//
-//    for (int i = 0; i < num_of_columns; i++) {
-//        double random_x = generate_random_double(lower_bound, upper_bound);
-//        double random_y = generate_random_double(lower_bound, upper_bound);
-//        std::string new_line = i == num_of_columns - 1 ? "" : "\n";
-//        if (i != num_of_columns) {
-//            outfile << random_x << "," << random_y << new_line;
-//        }
-//    }
-//
-//    outfile.close();
-//    return true;
-//}
+
 
 int main_driver_function(const char *FILE_PATH) {
     // open the file and extract x and y columns to arrays
     if (can_open_file(FILE_PATH)) {
         const unsigned int ARRAY_SIZE = calculate_array_size(FILE_PATH);
-        double *x_column_array = (double *) malloc(ARRAY_SIZE * sizeof(double)), *y_column_array = (double *) malloc(
-                ARRAY_SIZE * sizeof(double));
+        double *x_column_array, *y_column_array;
+        x_column_array = new (std::nothrow) double[ARRAY_SIZE];
+        y_column_array = new (std::nothrow) double[ARRAY_SIZE];
+//        double x_column_array = new double(ARRAY_SIZE), *y_column_array = (double *) malloc(
+//                ARRAY_SIZE * sizeof(double));
         // validate if data in csv file is in correct format and extract data
         if (validate_and_extract_data_from_column(FILE_PATH, x_column_array, y_column_array)) {
             std::cout.precision(10);
@@ -138,6 +98,11 @@ int main_driver_function(const char *FILE_PATH) {
             std::cout << "s3698997, s3698997@rmit.edu.vn, Trung, Duong" << std::endl;
             std::cout << "s3748874, s3748874@rmit.edu.vn, Phat, Tran" << std::endl;
             std::cout << "s3698989, s3698989@rmit.edu.vn, Thuan, Trang" << std::endl;
+
+            delete[] x_column_array;
+            delete[] y_column_array;
+            x_column_array = nullptr;
+            y_column_array = nullptr;
 
             return 0;
         }

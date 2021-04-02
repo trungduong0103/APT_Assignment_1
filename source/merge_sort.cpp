@@ -1,6 +1,8 @@
 #include <iostream>
 #include "../headers/merge_sort.h"
 
+// SOURCE USED: https://www.geeksforgeeks.org/merge-sort/
+
 void merge(double arr[], unsigned int l, unsigned int m, unsigned int r) {
     unsigned int n1 = m - l + 1;
     unsigned int n2 = r - m;

@@ -305,6 +305,33 @@ source/merge_sort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/merge_sort.cpp.s
 .PHONY : source/merge_sort.cpp.s
 
+source/test_functions.o: source/test_functions.cpp.o
+
+.PHONY : source/test_functions.o
+
+# target to build an object file
+source/test_functions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/test_functions.cpp.o
+.PHONY : source/test_functions.cpp.o
+
+source/test_functions.i: source/test_functions.cpp.i
+
+.PHONY : source/test_functions.i
+
+# target to preprocess a source file
+source/test_functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/test_functions.cpp.i
+.PHONY : source/test_functions.cpp.i
+
+source/test_functions.s: source/test_functions.cpp.s
+
+.PHONY : source/test_functions.s
+
+# target to generate assembly for a file
+source/test_functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/APT_Assignment_1.dir/build.make CMakeFiles/APT_Assignment_1.dir/source/test_functions.cpp.s
+.PHONY : source/test_functions.cpp.s
+
 source/validation.o: source/validation.cpp.o
 
 .PHONY : source/validation.o
@@ -359,6 +386,9 @@ help:
 	@echo "... source/merge_sort.o"
 	@echo "... source/merge_sort.i"
 	@echo "... source/merge_sort.s"
+	@echo "... source/test_functions.o"
+	@echo "... source/test_functions.i"
+	@echo "... source/test_functions.s"
 	@echo "... source/validation.o"
 	@echo "... source/validation.i"
 	@echo "... source/validation.s"

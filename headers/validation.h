@@ -1,8 +1,6 @@
 #ifndef APT_ASSIGNMENT_1_VALIDATION_H
 #define APT_ASSIGNMENT_1_VALIDATION_H
 
-bool valid_number_format(const std::string &string);
-
 void remove_whitespace(std::string &string);
 
 bool has_more_than_two_columns(const std::string &string);

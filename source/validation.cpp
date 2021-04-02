@@ -12,6 +12,7 @@ void remove_whitespace(std::string &string) {
     }
 }
 
+// check if a row of data has more than 2 columns, by checking comma count
 bool has_more_than_two_columns(const std::string &string) {
     unsigned short num_of_columns = 1;
     int pos = string.find(',');
@@ -25,27 +26,6 @@ bool has_more_than_two_columns(const std::string &string) {
         return true;
     }
     return false;
-}
-
-bool valid_number_format(const std::string &string) {
-    unsigned short int decimal_point_count = 0;
-    for (char c: string) {
-        if (c == '.') {
-            decimal_point_count++;
-        }
-    }
-    if (decimal_point_count > 1) {
-        return false;
-    }
-
-    std::cout << string << std::endl;
-
-    if (string[0] == '-') {
-        return string.substr(1, string.length()).find_first_not_of("0123456789.") == std::string::npos;
-    }
-    int pos = string.find_first_not_of("0123456789.");
-    std::cout << pos << "-" << string.length() << std::endl;
-    return string.find_first_not_of("0123456789.") == std::string::npos;
 }
 
 // check if string has any characters
@@ -64,6 +44,10 @@ bool has_special_characters(const std::string &string) {
         if (c == '-') {
             continue;
         }
+        // if a character is a special character return true
+        // however, decimal point '.' and newline '\n' is allowed
+        // because we allow decimal numbers, positive and negative,
+        // and each csv row ends with '\n'
         if ((c <= 47 || c >= 58) && c != 46) {
             if (c == 13) {
                 return false;
@@ -86,6 +70,7 @@ bool has_more_than_one_decimal_points(const std::string &string) {
     return count > 1;
 }
 
+// check if string has more than 2 minus signs
 bool has_more_than_one_minus_sign(const std::string &string) {
     unsigned int count = 0;
     for (char c : string) {
@@ -96,11 +81,15 @@ bool has_more_than_one_minus_sign(const std::string &string) {
     return count > 1;
 }
 
+// column data is correct if:
+// it does not have more than one decimal points or minus signs
+// it does not have any characters or special characters
 bool column_data_is_correct(const std::string &string) {
     return !has_more_than_one_decimal_points(string) && !has_more_than_one_minus_sign(string) &&
            !has_characters(string) && !has_special_characters(string);
 }
 
+// cli input is correct if it has 1 argument and must contains .csv at the end
 bool cli_input_is_correct(int argc, char *argv[]) {
     if (argc != 2) {
         std::cerr << "Must enter 1 argument!" << std::endl;
@@ -115,4 +104,3 @@ bool cli_input_is_correct(int argc, char *argv[]) {
 
     return true;
 }
-
