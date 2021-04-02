@@ -37,7 +37,7 @@ int main_driver_function(const char *FILE_PATH) {
         }
         // validate if data in csv file is in correct format and extract data
         if (validate_and_extract_data_from_column(FILE_PATH, x_column_array, y_column_array)) {
-            std::cout.precision(10);
+            std::cout.precision(16);
             // inferential statistics
             // b1 covariance
             double cov_x_y = calculate_sample_covariance(x_column_array, y_column_array, ARRAY_SIZE);

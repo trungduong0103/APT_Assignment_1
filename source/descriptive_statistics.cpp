@@ -112,6 +112,6 @@ double calculate_kurtosis(double sorted_array[], unsigned int array_size) {
         double fraction = deviation / s;
         sum += pow(fraction, 4.0);
     }
-    //  return sum / (array_size-1) - 3; pandas xài (n-1)
+    //  return sum / (array_size-1) - 3; pandas uses (n-1)
     return sum / array_size - 3;
 }
