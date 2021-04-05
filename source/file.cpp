@@ -54,7 +54,7 @@ bool validate_and_extract_data_from_column(const std::string &file_name,double x
         remove_whitespace(line);
         // each row of data must not be empty, and must not have more than 2 columns
         if (line.empty() || has_more_than_two_columns(line)) {
-            std::cerr << "Skipping row " << incorrectIndex + 2 << " in file " << file_name
+            std::clog << "Skipping row " << incorrectIndex + 2 << " in file " << file_name
                       << ". Row is empty or has more than 2 columns: " << line << std::endl;
             incorrectIndex++;
         } else {
@@ -66,7 +66,7 @@ bool validate_and_extract_data_from_column(const std::string &file_name,double x
             y_value = line.substr(index_to_comma + 1, line.length());
             // valid form is explained in column_data_is_correct()
             if (!column_data_is_correct(x_value) || !column_data_is_correct(y_value)) {
-                std::cerr << "Skipping row " << incorrectIndex + 2 << " in file " << file_name
+                std::clog << "Skipping row " << incorrectIndex + 2 << " in file " << file_name
                           << ". Invalid row data: " << line << std::endl;
                 incorrectIndex++;
             } else {

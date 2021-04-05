@@ -24,7 +24,25 @@ iostream
 
 /Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
 
+/Users/trung/CLionProjects/APT_Assignment_1/headers/test_functions.h
+
 /Users/trung/CLionProjects/APT_Assignment_1/headers/validation.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/main.cpp
+headers/helpers.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
+headers/validation.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/validation.h
+headers/test_functions.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/test_functions.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/source/descriptive_statistics.cpp
+string
+-
+cmath
+-
+../headers/descriptive_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
 
 /Users/trung/CLionProjects/APT_Assignment_1/source/file.cpp
 iostream
@@ -43,6 +61,8 @@ iostream
 -
 string
 -
+iomanip
+-
 ../headers/helpers.h
 /Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
 ../headers/file.h
@@ -53,6 +73,34 @@ string
 /Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h
 ../headers/merge_sort.h
 /Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/source/inferential_statistics.cpp
+iostream
+-
+cmath
+-
+../headers/inferential_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/inferential_statistics.h
+../headers/descriptive_statistics.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/descriptive_statistics.h
+../headers/helpers.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/helpers.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/source/merge_sort.cpp
+iostream
+-
+../headers/merge_sort.h
+/Users/trung/CLionProjects/APT_Assignment_1/headers/merge_sort.h
+
+/Users/trung/CLionProjects/APT_Assignment_1/source/test_functions.cpp
+iostream
+-
+fstream
+-
+string
+-
+random
+-
 
 /Users/trung/CLionProjects/APT_Assignment_1/source/validation.cpp
 iostream
